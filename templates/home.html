@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="templates/style.css" type="text/css">
+  <title>New Project</title>
+</head>
+<body>
+  <div id="container">
+  <h1>Learning web development</h1>
+  <img id="banner" src="static/banner.jpg" height="320" >
+  <h2>About</h2>
+  <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor pretium tortor, vel aliquet libero dapibus in. Ut fermentum vehicula enim, sit amet egestas velit placerat et. Donec sodales pulvinar enim, id pulvinar urna sagittis vel. Fusce bibendum quam in nunc imperdiet, vitae malesuada elit dignissim. Duis nec felis ut urna tempus varius at non urna. Duis eget est euismod, fringilla justo ac, sodales dolor. Nulla ut hendrerit ante. Curabitur et posuere tellus, laoreet placerat nibh. Sed nec nisl vel neque lobortis ultricies. Sed ac sem nec ipsum finibus placerat vel quis arcu. Praesent dapibus lectus at urna sagittis, sed faucibus nunc vulputate. Pellentesque lacinia dapibus orci, in pulvinar sem condimentum sit amet. Suspendisse sit amet tempor sem. Integer pulvinar sem purus, ac auctor elit finibus vel. Curabitur maximus, augue vel maximus laoreet, massa eros auctor urna, vitae euismod libero libero non nisl.</p>
+  <h2>Tables</h2>
+  <div>
+    {% for job in jobs %}
+    <div style="margin-bottom:16px;">
+      <h4 style= "color: rgb(120, 120, 120); margin-bottom: 4px;">
+        {{job['title']}}
+      </h4>
+  </div>
+    <div><b>Location:</b>{{job['location']}}'</div>
+    {% endfor %}
+  
+  <div style="text-align:center;"><button >Contact Us</button></div>
+  
+  <p>Copyright 2022</p>
+  </div>
+</body>
+</html>
