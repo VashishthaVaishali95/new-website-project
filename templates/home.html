@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+  <link rel="stylesheet" href="static/style.css" type="text/css">
   <title>New Project</title>
 </head>
 <body>
@@ -16,12 +16,7 @@
   <h2>Tables</h2>
   <div>
     {% for job in jobs %}
-    <div style="margin-bottom:16px;">
-      <h4 style= "color: rgb(120, 120, 120); margin-bottom: 4px;">
-        {{job['title']}}
-      </h4>
-  </div>
-    <div><b>Location:</b>{{job['location']}}'</div>
+    {% include 'jobitem.html' %}
     {% endfor %}
   
   <div style="text-align:center;"><button >Contact Us</button></div>
