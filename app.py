@@ -26,13 +26,14 @@ def my_project():
 def list_jobs():
     return jsonify(JOBS)
 
+from markupsafe import escape
+
+@app.route("/greet/<name>")
+def hello(name):
+    return f"Hello, {escape(name)}!"
+
 if __name__ == '__main__':
    app.run(host='0.0.0.0', debug=True)
 
 
 
-from markupsafe import escape
-
-@app.route("/<name>")
-def hello(name):
-    return f"Hello, {escape(name)}!"
